@@ -11,7 +11,7 @@
 
 
 // https://github.com/highlightjs/highlight.js/blob/master/src/styles/atom-one-dark-reasonable.css
-
+// ng-deep or global styling
 ::ng-deep {
   .hljs {
     display: block;
