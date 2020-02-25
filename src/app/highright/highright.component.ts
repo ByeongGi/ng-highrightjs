@@ -31,9 +31,7 @@ export class HighrightComponent implements OnInit {
       useBR: false,
     });
     const { value } = hljs.highlightAuto(this.code, this.languages);
-    this.highrightHtml = value;
-    // console.log('this.highrightHtml', this.highrightHtml);
-    this.codeblock.nativeElement.innerHTML = this.sanitizer.sanitize(SecurityContext.HTML, this.highrightHtml);
+    this.highrightHtml = this.sanitizer.sanitize(SecurityContext.HTML, value);
     hljs.highlightBlock(this.codeblock.nativeElement);
   }
 
